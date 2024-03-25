@@ -1,0 +1,27 @@
+"network":      {
+                "firewall_enabled":     1,
+                "management_console":   {
+                        "ip":   "10.126.38.0",
+                        "netmask":      "255.255.255.0"
+                },
+                "interface_type":       "eth",
+                "public_ip":    "192.168.0.15",
+                "nameserver":   "192.168.0.1",
+                "eth0": {
+                        "ip":   "192.168.193.200",
+                        "netmask":      "255.255.255.0",
+                        "enabled":      1,
+                        "gateway":      "192.168.193.254"
+                },
+                "vpn":  {
+                        "clients":      [{
+                                        "name": "tgb_vpn",
+                                        "enabled":      1,
+                                        "cipher":       "AES-128-CBC",
+                                        "host": "162.255.238.105",
+                                        "port": 1194,
+                                        "ca":   "/opt/tgbprogs/openvpn/keys/cacert.pem",
+                                        "cert": "/opt/tgbprogs/openvpn/keys/client.crt",
+                                        "key":  "/opt/tgbprogs/openvpn/keys/client.key"
+                                }]
+                },
