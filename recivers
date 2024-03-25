@@ -1,0 +1,73 @@
+"receivers":    {
+                "cpcs": [{
+                                "chains":       [{
+                                                "rcvrs":        [{
+                                                                "legacy_frame_enable":  1,
+                                                                "show_1bit_errors":     1,
+                                                                "modulation":   1,
+                                                                "show_bad":     0,
+                                                                "width":        1,
+                                                                "stats_interval":       60,
+                                                                "dsp_freq":     -6
+                                                        }, {
+                                                                "legacy_frame_enable":  1,
+                                                                "show_1bit_errors":     1,
+                                                                "modulation":   2,
+                                                                "show_bad":     0,
+                                                                "width":        1,
+                                                                "stats_interval":       60,
+                                                                "dsp_freq":     -6
+                                                        }, {
+                                                                "legacy_frame_enable":  1,
+                                                                "show_1bit_errors":     1,
+                                                                "modulation":   6,
+                                                                "show_bad":     0,
+                                                                "width":        0,
+                                                                "stats_interval":       60,
+                                                                "dsp_freq":     -3
+                                                        }, {
+                                                                "legacy_frame_enable":  1,
+                                                                "show_1bit_errors":     1,
+                                                                "modulation":   4,
+                                                                "show_bad":     0,
+                                                                "width":        0,
+                                                                "stats_interval":       60,
+                                                                "dsp_freq":     -1
+                                                        }],
+                                                "fpga_freq":    8
+                                        }],
+                                "speed":        115200,
+                                "gain_offset_calibration":      18,
+                                "path": "/dev/ttyRX",
+                                "type": "CPC2",
+                                "use_software_reset":   1
+                        }]
+        },
+        "ntp":  {
+                "servers":      ["130.126.24.44", "130.126.24.24"]
+        },
+        "transmit_channels":    {
+                "wildcards":    [{
+                                "source":       15,
+                                "targets":      [{
+                                                "channel":      2
+                                        }, {
+                                                "channel":      3
+                                        }]
+                        }],
+                "channels":     [{
+                                "base": 41,
+                                "frequency_id": 0,
+                                "offset":       898
+                        }, {
+                                "base": 41,
+                                "frequency_id": 1,
+                                "offset":       902
+                        }]
+        },
+        "buddy_quench": {
+                "index":        2,
+                "spacing":      5,
+                "total":        10,
+                "enabled":      0
+        },
